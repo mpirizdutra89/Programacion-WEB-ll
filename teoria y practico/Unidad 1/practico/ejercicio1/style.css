@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Estilos para los elementos <pre> */
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    text-align: left;
+    font-family: monospace;
+}
+
+/* Títulos */
+h2 {
+    color: #007bff;
+}
+
+h4 {
+    color: #555;
+}
+
+
+
+/* Estiliza el contenedor <pre> */
+pre#resultado {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    text-align: center;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Botón estilizado */
+pre#resultado button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+pre#resultado button:hover {
+    background-color: #0056b3;
+}
+
+/* Texto del resultado */
+pre#resultado span {
+    font-weight: bold;
+    color: #0f0; /* Verde para indicar true */
+    font-size: 18px;
+}
+
+
+/* Contenedor para los botones */
+.button-container {
+    display: flex;
+    gap: 5px; /* Espacio de 5px entre botones */
+    margin-top: 10px; /* Espacio con respecto al <pre> */
+}
+
+/* Estilos para los botones */
+.button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
