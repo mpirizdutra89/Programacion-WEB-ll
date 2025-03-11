@@ -1,0 +1,75 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Estilos para los elementos <pre> */
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    text-align: left;
+    font-family: monospace;
+  
+}
+
+
+/* Títulos */
+h2 {
+    color: #007bff;
+    text-align: left;
+}
+h4.blue{
+    color: #007bff;
+    text-align: left;
+}
+
+h4 {
+    color: #555;
+}
+p{text-align: le;}
+
+span{color: chartreuse;font-size: 18px;margin-left: 5px; text-align: left;}
+h4.blue span{color:#000}
+#resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    max-width: 500px; /* Limita el ancho del contenedor */
+    margin: 10px auto; /* Centra el contenedor */
+  }
+
+  input {
+    padding: 8px;
+    width: 70%; /* Ajusta el tamaño del input */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+  }
+
+  button {
+    padding: 8px 15px;
+    cursor: pointer;
+  }
