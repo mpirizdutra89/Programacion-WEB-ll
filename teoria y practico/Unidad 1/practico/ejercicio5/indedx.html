@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Fechas</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>5.- Refactorize el siguiente código utilizando sintaxis ES6 (Use rest y arrow función) </h2>
+
+
+        <h4>Funcion</h4>
+        <pre>
+            function filterOutOdds() { 
+                var nums = Array.prototype.slice.call(arguments); 
+                return nums.filter(function(num) { 
+                return num % 2 === 0 
+                }); 
+            } 
+            Resultado <span id="resultado1"></span>
+        </pre>
+        <h4>Funcion con ES6</h4>
+        <pre>
+            const numeroPar = (...nums) => nums.filter(num => num % 2 === 0);
+            Resultado <span id="resultado2"></span>
+        </pre>
+
+
+    </div>
+
+    <script src="./eje5.js"></script>
+</body>
+
+</html>
