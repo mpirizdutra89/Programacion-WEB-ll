@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 8</title>
+    <title>Ejercicio 9</title>
     <link rel="icon" type="image/png" href="https://example.com/favicon.png">
     <link rel="stylesheet" href="./style.css">
 
@@ -12,57 +12,32 @@
 
 <body>
     <div class="container">
-        <h2>Desarrolle un formulario que solicite Año, Valor de inflación y Suceso.
+        <h2>Escriba una librería javascript que permita autocompletar la entrada de un elemento
+            input de texto que tengan clase “autocomplete”.
+            input type=”text” class=”autocomplete”
         </h2>
-        <p> Controle que año este entre 1900 y 2020.</p>
-        <p>Controle que Valor de inflación sea mayor a 0 y tenga 2 decimales.</p>
-        <p>Agregue un botón que permita cargar los valores en un array de objetos.</p>
-        <p>Agregue 3 botones que permitan imprimir un listado de los datos ordenados por Año, por
-            inflación y por Suceso.</p>
+        <p>La librería debe tener en un array su propia base de datos de palabras con las que puede
+            autocompletar.</p>
+        <p>A medida que el usuario va agregando una letra a la caja de texto la librería debe ir
+            proponiendo las palabras cuyo comienzo coincidan con lo escrito por el usuario</p>
+
 
 
 
 
 
         <pre id="resultado">
-
-           <form id="formulario">
-            <label >Año:<span id="msjYear"></span></label>
-            <input type="number" id="year" name="year" >
-            
-            <label>Valor de inflación: <span id="msjInflacion"></span></label>
-            <input type="text" id="inflacion" name="inflacion"  >
-            
-           
-            <label >Suceso:<span id="msjSuceso"></span></label>
-            <input type="text" id="suceso" name="suceso"  >
-           
-           
-            <input type="submit" class="btn" value="Cargar" id="btnCargar">
-            
+            <label >Buscar</label>
+            <input type="text" id="inputBuscar" name="buscar"  >
+            <ul id="lista"></ul>
+             
             <span id="msjGeneral"> </span>
-           
-            
-        </form>
-        </pre>
-        <h4>Ordenar</h4>
+         </pre>
 
 
 
-        <div id="contListado">
-            <table id="listado">
-                <thead>
-                    <tr>
-                        <th class="ordenar" data-id="1">Año</th>
-                        <th class="ordenar" data-id="2">Suceso</th>
-                        <th class="ordenar" data-id="3">Inflación</th>
-                    </tr>
-                </thead>
-                <tbody id="listadoBody">
 
-                </tbody>
-            </table>
-        </div>
+
 
 
 

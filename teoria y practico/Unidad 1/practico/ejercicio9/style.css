@@ -56,7 +56,7 @@ p {
 pre#resultado {
     background: #272822;
     color: #f8f8f2;
-    padding: 15px;
+    padding: 100px;
     border-radius: 8px;
     overflow-x: auto;
     text-align: left;
@@ -125,66 +125,45 @@ span.error {
     font-size: medium !important;
 }
 
-#contListado {
+#msjGeneral {
+    margin-top: 20px !important;
+}
+
+#inputBuscador {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-table {
-    width: 90%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-
-
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-    background-color: #ddd;
-    cursor: pointer;
-}
-
-td {
+    padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
 }
 
+/* Estilos para la lista de sugerencias */
+#lista {
+    list-style: none;
+    padding: 0;
+    margin: 13px 0 0;
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    top: 406px;
+    left: 484px;
+}
 
-
-th {
-    background-color: #007BFF;
-    color: white;
+/* Estilos para cada ítem de la lista */
+#lista li {
+    color: #333;
+    padding: 10px;
     cursor: pointer;
-    text-transform: uppercase;
-    position: relative;
+    transition: background 0.3s;
 }
 
-th:hover {
-    background-color: #0056b3;
-}
-
-th::after {
-    content: " ⇅";
-    font-size: 14px;
-    opacity: 0.7;
+/* Cambio de color al pasar el mouse */
+#lista li:hover {
+    background: #f0f0f0;
 }
