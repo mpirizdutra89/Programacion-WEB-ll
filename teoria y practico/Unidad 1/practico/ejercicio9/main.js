@@ -9,7 +9,7 @@ import {
 
 
 intputBuscar.addEventListener('input', () => {
-  //msjGeneral.innerHTML = intputBuscar.value; para ver lo que se escribe en el input
+
   if (!validarBuscar()) {
     return;
   }

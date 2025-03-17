@@ -7,44 +7,23 @@
     <title>Ejercicio 9</title>
     <link rel="icon" type="image/png" href="https://example.com/favicon.png">
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
     <div class="container">
-        <h2>Escriba una librería javascript que permita autocompletar la entrada de un elemento
-            input de texto que tengan clase “autocomplete”.
-            input type=”text” class=”autocomplete”
-        </h2>
-        <p>La librería debe tener en un array su propia base de datos de palabras con las que puede
-            autocompletar.</p>
-        <p>A medida que el usuario va agregando una letra a la caja de texto la librería debe ir
-            proponiendo las palabras cuyo comienzo coincidan con lo escrito por el usuario</p>
+        <h2>Escriba una librería javascript que permita autocompletar la entrada de un elemento input de texto que
+            tengan clase “autocomplete”.</h2>
+        <p>La librería debe tener en un array su propia base de datos de palabras con las que puede autocompletar.</p>
+        <p>A medida que el usuario va agregando una letra a la caja de texto, la librería debe ir proponiendo las
+            palabras cuyo comienzo coincidan con lo escrito por el usuario.</p>
 
-
-
-
-
-
-        <pre id="resultado">
-            <label >Buscar</label>
-            <input type="text" id="inputBuscar" name="buscar"  >
-            <ul id="lista"></ul>
-             
-            <span id="msjGeneral"> </span>
-         </pre>
-
-
-
-
-
-
-
-
+        <div class="autocomplete-container">
+            <label for="inputBuscar">Buscar:</label>
+            <input type="text" id="inputBuscar" name="buscar" class="autocomplete">
+            <ul id="lista" class="autocomplete-list"></ul>
+        </div>
 
     </div>
-
-
 
     <script type="module" src="./main.js"></script>
 </body>

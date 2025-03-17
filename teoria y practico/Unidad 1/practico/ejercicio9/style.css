@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,13 +5,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /*  // height: 100vh; */
     margin: 0;
-
 }
 
-/* Contenedor principal */
+
 .container {
     background: white;
     padding: 20px;
@@ -23,113 +19,15 @@ body {
     margin-bottom: 150px;
 }
 
-/* Estilos para los elementos <pre> */
-pre {
-    background: #272822;
-    color: #f8f8f2;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-    text-align: left;
-    font-family: monospace;
 
+.autocomplete-container {
+    position: relative;
+
+    width: 100%;
 }
 
 
-/* Títulos */
-h2 {
-    color: #007bff;
-    text-align: left;
-}
-
-h4 {
-    color: #555;
-}
-
-p {
-    text-align: le;
-}
-
-
-
-/* Estiliza el contenedor <pre> */
-pre#resultado {
-    background: #272822;
-    color: #f8f8f2;
-    padding: 100px;
-    border-radius: 8px;
-    overflow-x: auto;
-    text-align: left;
-    font-family: monospace;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-
-}
-
-/* Botón estilizado */
-.btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Texto del resultado */
-pre#resultado span {
-    font-weight: bold;
-    color: #0f0;
-    /* Verde para indicar true */
-    font-size: x-large;
-}
-
-
-/* Contenedor para los botones */
-.button-container {
-    display: flex;
-    gap: 5px;
-    /* Espacio de 5px entre botones */
-    margin-top: 10px;
-    /* Espacio con respecto al <pre> */
-}
-
-/* Estilos para los botones */
-.button-container button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.button-container button:hover {
-    background-color: #0056b3;
-}
-
-span.error {
-    color: rgb(253, 139, 139) !important;
-
-    text-align: left !important;
-    margin-top: 10px !important;
-    font-size: medium !important;
-}
-
-#msjGeneral {
-    margin-top: 20px !important;
-}
-
-#inputBuscador {
+#inputBuscar {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -138,12 +36,13 @@ span.error {
     outline: none;
 }
 
-/* Estilos para la lista de sugerencias */
+
 #lista {
     list-style: none;
     padding: 0;
-    margin: 13px 0 0;
-    width: 25%;
+    margin: 0;
+    width: 100%;
+
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
@@ -151,11 +50,14 @@ span.error {
     max-height: 200px;
     overflow-y: auto;
     position: absolute;
-    top: 406px;
-    left: 484px;
+
+    top: 100%;
+
+    left: 0;
+    z-index: 10;
 }
 
-/* Estilos para cada ítem de la lista */
+
 #lista li {
     color: #333;
     padding: 10px;
@@ -163,7 +65,13 @@ span.error {
     transition: background 0.3s;
 }
 
-/* Cambio de color al pasar el mouse */
+
 #lista li:hover {
     background: #f0f0f0;
+}
+
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
