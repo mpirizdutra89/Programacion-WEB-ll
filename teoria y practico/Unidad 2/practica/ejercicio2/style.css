@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para el contenedor */
+.container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    /* Ancho fijo */
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/* Estilo para los títulos */
+h2 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+/* Estilo para la fecha y hora */
+#fecha,
+#hora {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Agregar efecto hover al contenedor */
+.container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-60%);
+    transition: all 0.3s ease-in-out;
+}

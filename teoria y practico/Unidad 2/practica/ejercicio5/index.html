@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas de Libros</title>
+    <link rel="stylesheet" href="/recursos/css/style.css">
+    <link rel="shortcut icon" href="/recursos/img/libro.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div class="barra-navegacion">
+        <div class="logo">
+            Tienda de Libros
+        </div>
+        <div class="menu">
+
+
+            <input type="checkbox" id="checkGenero" value="checkGenero">
+            <label for="checkGenero">Genero</label>
+
+
+
+            <input type="text" id="buscador-libros" name="buscador-libros" placeholder="Buscar libros..."
+                list="lista-libros">
+            <datalist id="lista-libros">
+                <option value="The Lightning Thief"></option>
+                <option value="The Sea of Monsters"></option>
+                <option value="The Titan's Curse"></option>
+                <option value="The Battle of the Labyrinth"></option>
+                <option value="The Last Olympian"></option>
+                <option value="Lucene in Action, Second Edition"></option>
+            </datalist>
+
+            <div id="contenedorFiltros">
+                <input type="radio" id="precioMenor" class="filtro-precio" name="filtro-precio" value="asc">
+                <label for="precioMenor">Menor precio</label>
+                <input type="radio" id="precioMayor" class="filtro-precio" name="filtro-precio" value="desc">
+                <label for="precioMayor">Mayor precio</label>
+            </div>
+
+            <button id="btnOpenForm">Agregar Libro</button>
+        </div>
+    </div>
+
+
+    <div class="carrito-libros" id="carritoLibros">
+
+        <!--  <div class="articulo-libro">
+            <h3>The Lightning Thief</h3>
+            <p><strong>Autor:</strong> Rick Riordan</p>
+            <p><strong>Género:</strong> Fantasía</p>
+            <p><strong>Precio:</strong> $12</p>
+            <p><strong>Páginas:</strong> 384</p>
+        </div>
+ -->
+
+
+    </div>
+
+
+    <div class="overlay-formulario-flotante" id="overlayFormulario">
+        <div class="formulario-flotante">
+            <h2>Agregar Nuevo Libro</h2>
+            <form>
+                <input type="text" id="titulo-libro" placeholder="Título del Libro" required>
+                <input type="text" id="autor-libro" placeholder="Autor" required>
+
+
+                <input type="text" id="genero-libro" placeholder="Género" list="lista-generos" required>
+                <datalist id="lista-generos">
+                    <option value="Fantasía"></option>
+                    <option value="Ciencia Ficción"></option>
+                    <option value="Misterio"></option>
+                    <option value="Romántico"></option>
+                    <option value="Terror"></option>
+                    <option value="Aventura"></option>
+                    <option value="Histórico"></option>
+                    <option value="Biografía"></option>
+                    <option value="Drama"></option>
+                    <option value="IT"></option>
+                </datalist>
+
+                <input type="text" id="series_t" placeholder="series_t" required>
+                <input type="number" id="precio-libro" placeholder="Precio" required>
+                <input type="number" id="paginas-libro" placeholder="Páginas" required>
+
+
+                <div class="contenedor-botones">
+                    <div><span id="txtMsj"></span></div>
+                    <button type="button" id="btnAddLibro">Agregar Libro</button>
+                    <button type="button" id="btncloseForm" class="boton-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="recursos/js/main.js"></script>
+
+</body>
+
+</html>

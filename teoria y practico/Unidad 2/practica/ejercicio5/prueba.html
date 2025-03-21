@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas de Libros</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Barra de navegación */
+        .barra-navegacion {
+            display: flex;
+            justify-content: center;
+            /* Centra el contenido del menú */
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        .barra-navegacion .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        .barra-navegacion .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .barra-navegacion .menu input[type="text"] {
+            padding: 5px;
+            margin-right: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .barra-navegacion .menu input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .barra-navegacion .menu label {
+            margin-right: 15px;
+            font-size: 16px;
+        }
+
+        .barra-navegacion button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .barra-navegacion button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para los libros */
+        .carrito-libros {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .articulo-libro {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .articulo-libro h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .articulo-libro p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        /* Estilo para el formulario flotante */
+        .overlay-formulario-flotante {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo semitransparente */
+            display: none;
+            /* Oculto por defecto */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            /* Asegura que se muestre sobre otros elementos */
+        }
+
+        .formulario-flotante {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .formulario-flotante h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .formulario-flotante input,
+        .formulario-flotante textarea {
+            width: 100%;
+            padding: 10px;
+            /* Padding dentro de los inputs */
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Asegura que el padding no afecte el ancho total */
+        }
+
+        /* Ajuste de los botones para alinearlos a la izquierda y derecha */
+        .formulario-flotante .contenedor-botones {
+            display: flex;
+            justify-content: space-between;
+            /* Espacio entre los botones */
+            align-items: center;
+        }
+
+        .formulario-flotante button {
+            width: 48%;
+            /* Ocupa el 48% del ancho para los botones */
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .formulario-flotante button:hover {
+            background-color: #0056b3;
+        }
+
+        .formulario-flotante .boton-cancelar {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="barra-navegacion">
+        <div class="logo">
+            Tienda de Libros
+        </div>
+        <div class="menu">
+
+            <!-- Checkboxes antes del input buscar libros -->
+            <input type="checkbox" id="checkGenero" value="checkGenero">
+            <label for="checkGenero">Genero</label>
+
+
+            <!-- Buscador autocompletado -->
+            <input type="text" id="buscador-libros" name="buscador-libros" placeholder="Buscar libros..."
+                list="lista-libros">
+            <datalist id="lista-libros">
+                <option value="The Lightning Thief">
+                <option value="The Sea of Monsters">
+                <option value="The Titan's Curse">
+                <option value="The Battle of the Labyrinth">
+                <option value="The Last Olympian">
+                <option value="Lucene in Action, Second Edition">
+            </datalist>
+
+            <!-- Filtro por precio (Mayor precio primero) -->
+            <!-- <label for="filtro-precio">Ordenar por Precio:</label -->
+            <input type="radio" id="bajo-a-alto" name="filtro-precio" value="bajo-a-alto">
+            <label for="bajo-a-alto">Menor precio</label>
+            <input type="radio" id="alto-a-bajo" name="filtro-precio" value="alto-a-bajo">
+            <label for="alto-a-bajo">Mayor precio</label>
+
+            <!-- Botón para abrir el formulario de contacto -->
+            <button onclick="abrirFormulario()">Agregar Libro</button>
+        </div>
+    </div>
+
+    <!-- Área para mostrar los libros -->
+    <div class="carrito-libros" id="carritoLibros">
+        <!-- Libro 1 -->
+        <div class="articulo-libro">
+            <h3>The Lightning Thief</h3>
+            <p><strong>Autor:</strong> Rick Riordan</p>
+            <p><strong>Género:</strong> Fantasía</p>
+            <p><strong>Precio:</strong> $12</p>
+            <p><strong>Páginas:</strong> 384</p>
+        </div>
+
+        <!-- Libro 2 -->
+        <div class="articulo-libro">
+            <h3>The Sea of Monsters</h3>
+            <p><strong>Autor:</strong> Rick Riordan</p>
+            <p><strong>Género:</strong> Fantasía</p>
+            <p><strong>Precio:</strong> $15</p>
+            <p><strong>Páginas:</strong> 288</p>
+        </div>
+
+        <!-- Libro 3 -->
+        <div class="articulo-libro">
+            <h3>The Titan's Curse</h3>
+            <p><strong>Autor:</strong> Rick Riordan</p>
+            <p><strong>Género:</strong> Fantasía</p>
+            <p><strong>Precio:</strong> $14</p>
+            <p><strong>Páginas:</strong> 352</p>
+        </div>
+
+        <!-- Libro 4 -->
+        <div class="articulo-libro">
+            <h3>The Battle of the Labyrinth</h3>
+            <p><strong>Autor:</strong> Rick Riordan</p>
+            <p><strong>Género:</strong> Fantasía</p>
+            <p><strong>Precio:</strong> $13</p>
+            <p><strong>Páginas:</strong> 361</p>
+        </div>
+
+        <!-- Libro 5 (Nuevo libro agregado) -->
+        <div class="articulo-libro">
+            <h3>Lucene in Action, Second Edition</h3>
+            <p><strong>Autor:</strong> Michael McCandless</p>
+            <p><strong>Género:</strong> IT</p>
+            <p><strong>Precio:</strong> $30</p>
+            <p><strong>Páginas:</strong> 475</p>
+        </div>
+    </div>
+
+    <!-- Formulario flotante con overlay -->
+    <div class="overlay-formulario-flotante" id="overlayFormulario">
+        <div class="formulario-flotante">
+            <h2>Agregar Nuevo Libro</h2>
+            <form>
+                <input type="text" id="titulo-libro" placeholder="Título del Libro" required>
+                <input type="text" id="autor-libro" placeholder="Autor" required>
+
+                <!-- Género con datalist -->
+                <input type="text" id="genero-libro" placeholder="Género" list="lista-generos" required>
+                <datalist id="lista-generos">
+                    <option value="Fantasía">
+                    <option value="Ciencia Ficción">
+                    <option value="Misterio">
+                    <option value="Romántico">
+                    <option value="Terror">
+                    <option value="Aventura">
+                    <option value="Histórico">
+                    <option value="Biografía">
+                    <option value="Drama">
+                    <option value="IT">
+                </datalist>
+
+                <input type="number" id="precio-libro" placeholder="Precio" required>
+                <input type="number" id="paginas-libro" placeholder="Páginas" required>
+
+                <!-- Contenedor de botones con espacio entre ellos -->
+                <div class="contenedor-botones">
+                    <button type="submit">Agregar Libro</button>
+                    <button type="button" class="boton-cancelar" onclick="cerrarFormulario()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Función para abrir el formulario
+        function abrirFormulario() {
+            document.getElementById("overlayFormulario").style.display = "flex";
+        }
+
+        // Función para cerrar el formulario
+        function cerrarFormulario() {
+            document.getElementById("overlayFormulario").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

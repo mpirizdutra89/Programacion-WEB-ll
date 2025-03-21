@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+.barra-navegacion {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.barra-navegacion .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.barra-navegacion .menu {
+    display: flex;
+    align-items: center;
+}
+
+.barra-navegacion .menu input[type="text"] {
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.barra-navegacion .menu input[type="radio"] {
+    margin-right: 10px;
+}
+
+.barra-navegacion .menu label {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.barra-navegacion button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.barra-navegacion button:hover {
+    background-color: #45a049;
+}
+
+
+.carrito-libros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 90px auto;
+}
+
+.articulo-libro {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.articulo-libro h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.articulo-libro p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Efecto al pasar el mouse */
+.articulo-libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: #007BFF;
+    cursor: pointer;
+}
+
+/* Sutil cambio de color en el título */
+.articulo-libro:hover h3 {
+    color: #007BFF;
+}
+
+.overlay-formulario-flotante {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+
+
+
+
+}
+
+.formulario-flotante {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-flotante h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formulario-flotante input,
+.formulario-flotante textarea {
+    width: 100%;
+    padding: 10px;
+
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+
+.formulario-flotante .contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.formulario-flotante button {
+    width: 48%;
+
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario-flotante button:hover {
+    background-color: #0056b3;
+}
+
+.formulario-flotante .boton-cancelar {
+    background-color: #ccc;
+}
