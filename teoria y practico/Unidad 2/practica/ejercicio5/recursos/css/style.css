@@ -171,6 +171,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .formulario-flotante button:hover {
@@ -179,4 +180,12 @@ body {
 
 .formulario-flotante .boton-cancelar {
     background-color: #ccc;
+}
+
+span#txtMsj {
+    font-size: 14px;
+
+    font-weight: bold;
+    text-align: center;
+
 }

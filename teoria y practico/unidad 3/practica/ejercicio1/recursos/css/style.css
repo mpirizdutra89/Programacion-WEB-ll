@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #505050;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 5px 5px;
+    border-radius: 5px;
+    overflow-x: auto;
+    text-align: left;
+    font-family: monospace;
+}
+
+h2 {
+    color: #007bff;
+    text-align: left;
+}
+
+h4.blue {
+    color: #007bff;
+    text-align: left;
+}
+
+h4 {
+    color: #555;
+}
+
+pre p {
+    color: #f8f8f2;
+    margin: 0;
+
+}
+
+span {
+    color: chartreuse;
+    font-size: 18px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+h4.blue span {
+    color: #000;
+}
+
+#resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004494;
+}
+
+
+ul#listaUsuarios {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul#listaUsuarios li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#listaUsuarios li img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+ul#listaUsuarios li p {
+    margin: 0;
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+ul#listaUsuarios li button.btnEliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%;
+}
+
+
+button:disabled,
+button.disabled {
+    background-color: #cccccc;
+
+    color: #666666;
+
+    cursor: not-allowed;
+
+    opacity: 0.6;
+
+}
+
+ul#listaUsuarios li button.btnEliminar:hover {
+    background-color: #cc0000;
+}

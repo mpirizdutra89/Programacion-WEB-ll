@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./recursos/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./recursos/css/style.css" />
+    <title>Ejercicio 2 Ajax</title>
+</head>
+
+<body>
+    <div class="container">
+        <pre>
+                <h3>Realice una página que permita mostrar información de autos.</h3>
+                <ol>
+                    <li> 1. Acceda a la pagina https://api.api-ninjas.com</li>
+                    <li> 2. Registrese.</li>
+                    <li> 3. Obtenga la API_KEY</li>
+                    <li> 4. Busque el endpoint cars.</li>
+                    <li>  5. Verifique como funciona el endpoint, que parámetros usa y cual es el formato del resultado.</li>
+                    <li>  6. Note que para utilizar la api se debe proveer una API KEY que debe enviarse en los encabezados del request.</li>
+                
+                    <p> Solicite por medio de un formulario la marca, modelo y tipo de combustible y actualice
+                     los datos de los autos sin recargar el contenido de la página.
+                     Los filtros deben aplicarse en forma acumulativa si el usuario lo desea. </p>
+                            
+                    </ol>
+                   
+                    
+          </pre>
+
+        <pre id="resultado2">
+
+            <form id="formBusqueda">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" placeholder="Ej: Toyota">
+                
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla">
+                
+                <label for="combustible">Tipo de Combustible:</label>
+                <select id="combustible" name="combustible">
+                    <option value="">Cualquiera</option>
+                    <option value="gas">Gasolina</option>
+                    <option value="diesel">Diésel</option>
+                    <option value="electricity">Eléctrico</option>
+                    
+                </select>
+                
+                <button type="button" id="btnBuscar">Buscar</button>
+            </form>
+
+
+        </pre>
+
+        <pre id="resultado">
+            <small >Ruta armada:<span></span></small>
+            <h4>Resultados:<span id="cantidadAutos"></span></h4>
+            <p id="autoBuscado"></p>
+
+        </pre>
+    </div>
+
+    <script src="./recursos/js/main.js"></script>
+</body>
+
+</html>

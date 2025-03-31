@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2 Fechas</title>
     <link rel="stylesheet" href="./style.css">
- 
+
 </head>
+
 <body>
     <div class="container">
         <h4 class="blue">3.- Escriba un programa javascript que defina una función flecha que permita redondear un
             número a una cantidad específica de dígitos.
             Utilice los template literals para imprimir los datos.</h4>
-            <h4>Ej: </h4>
-           <p>console.log(round(1.005, 2)); // 1.01</p>
-           <p>console.log(round(1.05, 2)); // 1.05</p>
-           <p> console.log(round(1.0005, 2)); //  1 </p> 
-            
-           
-            
-           
-        
+        <h4>Ej: </h4>
+        <p>console.log(round(1.005, 2)); // 1.01</p>
+        <p>console.log(round(1.05, 2)); // 1.05</p>
+        <p> console.log(round(1.0005, 2)); //  1 </p>
 
-        
-        <pre id="resultado" >
+
+
+
+
+
+
+        <pre id="resultado">
             <input type="text" id="numeros" placeholder="Escribe algo...">
             <button id="enviar">Enviar</button>
             <span></span>
             
         </pre>
 
-       
-       
-        
-        
-        
+
+
+
+
+
     </div>
 
-    <div class="container" >
+    <div class="container">
         <h4 class="blue">4.-Que es lo que realiza la siguiente función.
-           <span>const reverseString = str => [...str].reverse().join('');</span>
-            Compruebe su funcionamiento:</h4>
+            <span>const reverseString = str => [...str].reverse().join('');</span>
+            Compruebe su funcionamiento:
+        </h4>
 
-            <pre>
+        <pre>
                 <p>[---str] la convirte a un string de caracteres. // ["h","0","l","a"]</p>
                 <p>.reverse()  inverte el array </p>
                 <p>.join('')  uno el array en un string.</p>
             </pre>
 
-            <pre id="resultado" >
+        <pre id="resultado">
                 <input type="text" id="palabra" placeholder="Escribe algo...">
                 <button id="invertir">Invertir</button>
                 
                 
             </pre>
-            <pre>
+        <pre>
                 <span id="resultadoInvercion"></span>
             </pre>
     </div>
 
     <script src="./eje3_4.js"></script>
 </body>
+
 </html>

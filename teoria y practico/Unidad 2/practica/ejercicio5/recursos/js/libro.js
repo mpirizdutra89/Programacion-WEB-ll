@@ -2,9 +2,9 @@ class Libro {
     #inStock;
     #price;
     static BD = [];
-    constructor(id, label, name, author, series_t, genre_s, price, pages_i) {
-        this.id = id;
-        this.label = label;
+    constructor(name, author, series_t, genre_s, price, pages_i) {
+        this.id = this.generarIDUnico();
+        this.label = ["book", "hardcover"];
         this.name = name;
         this.author = author;
         this.series_t = series_t;
@@ -30,6 +30,21 @@ class Libro {
         this.#price = price;
     }
 
+    generarIDUnico() {
+        let nuevoID;
+        const prefijo = "978-";
+
+        do {
+            let numeros = "";
+            for (let i = 0; i < 10; i++) {
+                numeros += Math.floor(Math.random() * 10);
+            }
+            nuevoID = prefijo + numeros;
+        } while (Libro.BD.some(libro => libro.id === nuevoID));
+
+        return nuevoID;
+    }
+
 
 
     toString() {
@@ -39,13 +54,13 @@ class Libro {
         name: ${this.name}`
     }
     static addLibroDefault() {
-        const libro1 = new Libro("978-0641723445", ["book", "hardcover"], "The Lightning Thief", "Rick Riordan", "Percy Jackson and the Olympians", "fantasy", 12, 384);
+        const libro1 = new Libro("The Lightning Thief", "Rick Riordan", "Percy Jackson and the Olympians", "fantasy", 12, 384);
 
-        const libro2 = new Libro("978-1423103349", ["book", "paperback"], "The Sea of Monsters", "Rick Riordan", "Percy Jackson and the Olympians", "fantasy", 6.49, 304);
+        const libro2 = new Libro("The Sea of Monsters", "Rick Riordan", "Percy Jackson and the Olympians", "fantasy", 6.49, 304);
 
-        const libro3 = new Libro("978-1857995879", ["book", "paperback"], "Sophie's World : The Greek Philosophers", "Jostein Gaarder", "", "fantasy", 3.07, 64);
+        const libro3 = new Libro("Sophie's World : The Greek Philosophers", "Jostein Gaarder", "", "fantasy", 3.07, 64);
 
-        const libro4 = new Libro("978-1933988177", ["book", "paperback"], "Lucene in Action", "Erik Hatcher", "Lucene in Action", "IT", 30, 475);
+        const libro4 = new Libro("Lucene in Action", "Erik Hatcher", "Lucene in Action", "IT", 30, 475);
 
 
         Libro.BD.push(libro1, libro2, libro3, libro4)

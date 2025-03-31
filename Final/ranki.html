@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntados - Resultado Final</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: rgb(27, 38, 44);
+            color: rgb(187, 225, 250);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            background-color: rgb(230, 57, 70);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .result-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-box h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .result-box p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .points {
+            color: #e63946;
+        }
+
+        /* Estilo para la tabla */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #e63946;
+            color: white;
+        }
+
+        table td {
+            background-color: #f1f1f1;
+        }
+
+        .next-btn {
+            padding: 15px 30px;
+            background-color: #e46973;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #E63946;
+            transform: scale(1.05);
+        }
+
+        .next-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- Puntos a la izquierda -->
+        <div class="points">Puntos: 0</div>
+        <!-- Título centrado -->
+        <div class="banner-text">PON A PRUEBA TU CONOCIMIENTO</div>
+        <!-- Foto de perfil a la derecha -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Foto de Perfil"> <!-- Foto de perfil del usuario -->
+        </div>
+    </div>
+
+    <div class="game-container">
+        <!-- Caja de resultado -->
+        <div class="result-box">
+            <!-- Resultado del juego -->
+            <h2>¡Juego Terminado!</h2>
+            <p>Respuestas Correctas: <span class="points">8</span></p>
+            <p>Respuestas Incorrectas: <span class="points">2</span></p>
+            <p>Puntos Totales: <span class="points">80</span></p>
+
+            <!-- Tabla de clasificación -->
+            <h3>Ranking de Jugadores</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>María Gómez</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Carlos Rodríguez</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Laura Fernández</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Felipe Torres</td>
+                        <td>80</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botón Siguiente -->
+        <button class="next-btn">Volver al inicio</button>
+    </div>
+</body>
+
+</html>

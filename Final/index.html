@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntados</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: rgb(27, 38, 44);
+            color: rgb(187, 225, 250);
+
+
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            background-color: rgb(230, 57, 70);
+
+            /* Rosa claro */
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        /* Sección de puntos */
+        .points {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            background-color: #fff;
+            /* Rosa claro */
+            padding: 10px 20px;
+            border-radius: 12px;
+        }
+
+        /* Foto de perfil */
+        .profile {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contenedor para título */
+        .banner-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding-right: 6%;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+        }
+
+        .question-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .answers-box {
+            background: transparent;
+            width: 100%;
+            text-align: center;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .option {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+
+        .option:hover {
+            background: #E63946;
+            /* Mismo color que el banner */
+            color: white;
+            transform: scale(1.05);
+
+        }
+
+        .option:focus {
+            outline: none;
+        }
+
+        /* Estilos para respuesta incorrecta */
+        .incorrect {
+            background-color: #FF4C4C;
+            color: white;
+            border: 2px solid #7b7a7a;
+        }
+
+        .incorrect:hover {
+            background-color: #FF1A1A;
+        }
+
+        /* Estilos para respuesta correcta */
+        .correct {
+            background-color: #4CAF50;
+            color: white;
+            border: 2px solid #7b7a7a;
+        }
+
+        .correct:hover {
+            background-color: #388E3C;
+        }
+
+        /* Estilos para el botón siguiente */
+        .next-btn {
+            padding: 15px 30px;
+            background-color: #e46973;
+            /* Lavanda suave */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #E63946;
+            transform: scale(1.05);
+        }
+
+        .next-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- Puntos a la izquierda -->
+        <div class="points">Puntos: 0</div>
+        <!-- Título centrado -->
+        <div class="banner-text">PON A PRUEBA TU CONOCIMIENTO</div>
+        <!-- Foto de perfil a la derecha -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Foto de Perfil"> <!-- Foto de perfil del usuario -->
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="question-box">
+            <div class="question">¿Qué banda llegó primero?</div>
+        </div>
+        <div class="answers-box">
+            <button class="option">Maroon 5</button>
+            <button class="option">Nirvana</button>
+            <button class="option">Justin Bieber</button>
+            <button class="option">Coldplay</button>
+        </div>
+        <!-- Botón Siguiente -->
+        <button class="next-btn">Siguiente</button>
+    </div>
+
+
+
+
+    <!--  <script>
+        function cargarVista(vista) {
+            fetch(vista + ".html")
+                .then(response => {
+                    if (!response.ok) throw new Error("Vista no encontrada");
+                    return response.text();
+                })
+                .then(html => document.getElementById("contenido").innerHTML = html)
+                .catch(error => document.getElementById("contenido").innerHTML = "<h2>Error</h2><p>No se pudo cargar la vista.</p>");
+        } -->
+
+</body>
+
+</html>

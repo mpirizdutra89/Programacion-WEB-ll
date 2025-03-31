@@ -47,25 +47,13 @@
     </div>
 
 
-    <div class="carrito-libros" id="carritoLibros">
-
-        <!--  <div class="articulo-libro">
-            <h3>The Lightning Thief</h3>
-            <p><strong>Autor:</strong> Rick Riordan</p>
-            <p><strong>Género:</strong> Fantasía</p>
-            <p><strong>Precio:</strong> $12</p>
-            <p><strong>Páginas:</strong> 384</p>
-        </div>
- -->
-
-
-    </div>
+    <div class="carrito-libros" id="carritoLibros"></div>
 
 
     <div class="overlay-formulario-flotante" id="overlayFormulario">
         <div class="formulario-flotante">
             <h2>Agregar Nuevo Libro</h2>
-            <form>
+            <form id="formLibro">
                 <input type="text" id="titulo-libro" placeholder="Título del Libro" required>
                 <input type="text" id="autor-libro" placeholder="Autor" required>
 
@@ -90,10 +78,11 @@
 
 
                 <div class="contenedor-botones">
-                    <div><span id="txtMsj"></span></div>
+
                     <button type="button" id="btnAddLibro">Agregar Libro</button>
                     <button type="button" id="btncloseForm" class="boton-cancelar">Cancelar</button>
                 </div>
+                <span id="txtMsj"></span>
             </form>
         </div>
     </div>

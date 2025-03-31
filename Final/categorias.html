@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntados</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: rgb(27, 38, 44);
+            color: rgb(187, 225, 250);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            background-color: rgb(230, 57, 70);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+        }
+
+        .category-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-box h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .category-option {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+
+        .category-option:hover {
+            background: #E63946;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .category-option:focus {
+            outline: none;
+        }
+
+        .next-btn {
+            padding: 15px 30px;
+            background-color: #e46973;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #E63946;
+            transform: scale(1.05);
+        }
+
+        .next-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- Puntos a la izquierda -->
+        <div class="points">Puntos: 0</div>
+        <!-- Título centrado -->
+        <div class="banner-text">PON A PRUEBA TU CONOCIMIENTO</div>
+        <!-- Foto de perfil a la derecha -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Foto de Perfil"> <!-- Foto de perfil del usuario -->
+        </div>
+    </div>
+
+    <div class="game-container">
+        <!-- Sección para elegir categorías -->
+        <div class="category-box">
+            <h2>Selecciona una categoría</h2>
+            <button class="category-option">Deportes</button>
+            <button class="category-option">Historia</button>
+            <button class="category-option">Cultura General</button>
+            <button class="category-option">Ciencia</button>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

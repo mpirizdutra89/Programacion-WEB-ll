@@ -6,6 +6,7 @@ const txtMsj = document.querySelector('#txtMsj');
 const carritoLibros = document.querySelector('#carritoLibros');
 const filtroPrecio = document.querySelector('.filtro-precio');
 const contenedorFiltros = document.querySelector('#contenedorFiltros');
+const formLibro = document.querySelector('#formLibro');
 /*  Funciones Open Close formulario */
 const openForm = () => { flotanteForm.style.display = 'flex'; }
 const closeForm = () => { flotanteForm.style.display = 'none'; }

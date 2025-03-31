@@ -1,7 +1,11 @@
 import { openForm, closeForm, btnOpenForm, btncloseForm, btnAddLibro, txtMsj, carritoLibros, filtroPrecio, contenedorFiltros } from './variables-bd.js';
 import { Libro } from './libro.js';
 btnOpenForm.addEventListener('click', openForm);
-btncloseForm.addEventListener('click', closeForm);
+btncloseForm.addEventListener('click', function () {
+    closeForm();
+    txtMsj.innerHTML = "";
+    txtMsj.style.color = "";
+});
 //carga de libros por defecto
 
 const cargaDefault = () => {
@@ -13,27 +17,30 @@ renderLibros()
 
 
 btnAddLibro.addEventListener('click', () => {
-    const id = document.querySelector('#id').value;
-    const label = document.querySelector('#label').value;
-    const name = document.querySelector('#name').value;
-    const author = document.querySelector('#author').value;
-    const series_t = document.querySelector('#series_t').value;
-    const genre_s = document.querySelector('#genre_s').value;
 
-    const price = document.querySelector('#price').value;
-    const pages_i = document.querySelector('#pages_i').value;
-    const libro = new Libro(id, label, name, author, series_t, genre_s, price, pages_i);
+
+    let titulo = document.querySelector('#titulo-libro').value;
+    let author = document.querySelector('#autor-libro').value;
+    let series_t = document.querySelector('#series_t').value;
+    let genre_s = document.querySelector('#genero-libro').value;
+
+    let price = document.querySelector('#precio-libro').value;
+    let pages_i = document.querySelector('#paginas-libro').value;
+
+    const libro = new Libro(titulo, author, series_t, genre_s, price, pages_i);
     if (verificacion()) {
 
 
-        const libro = new Libro(id, label, name, author, series_t, genre_s, price, pages_i);
+        const libro = new Libro(titulo, author, series_t, genre_s, price, pages_i);
         try {
-            if (Libro.BD.find(libro => libro.id === id/* Id const arriba */)) {
+            if (Libro.BD.find(libroBd => libroBd.id === libro.id/* Id const arriba */)) {
                 throw new Error("El libro ya existe");
             } else {
                 libro.addLibro();
                 txtMsj.innerHTML = "Libro agregado correctamente";
                 txtMsj.style.color = "green";
+                renderLibros();
+                formLibro.reset();
             }
         }
         catch (e) {
@@ -49,17 +56,17 @@ btnAddLibro.addEventListener('click', () => {
 
 function verificacion() {
     txtMsj.innerHTML = "";
-    let id = document.querySelector('#id').value;
-    let label = document.querySelector('#label').value;
-    let name = document.querySelector('#name').value;
-    let author = document.querySelector('#author').value;
+
+
+    let titulo = document.querySelector('#titulo-libro').value;
+    let author = document.querySelector('#autor-libro').value;
     let series_t = document.querySelector('#series_t').value;
-    let genre_s = document.querySelector('#genre_s').value;
+    let genre_s = document.querySelector('#genero-libro').value;
 
-    let price = document.querySelector('#price').value;
-    let pages_i = document.querySelector('#pages_i').value;
+    let price = document.querySelector('#precio-libro').value;
+    let pages_i = document.querySelector('#paginas-libro').value;
 
-    if (id == "" || label == "" || name == "" || author == "" || series_t == "" || genre_s == "" || price == "" || pages_i == "") {
+    if (titulo == "" || author == "" || series_t == "" || genre_s == "" || price == "" || pages_i == "") {
         txtMsj.innerHTML = "Por favor, complete todos los campos";
         txtMsj.style.color = "red";
         return false;
@@ -119,6 +126,9 @@ function crearArticuloLibro(libro) {
     <p><strong>Género:</strong> ${libro.genre_s}</p>
     <p><strong>Precio:$</strong> ${libro.price}</p>
     <p><strong>Páginas:</strong> ${libro.pages_i}</p>
+    <p>Stock: ${libro.inStock ? 'Disponible' : 'No disponible'}</p>
+    
     `;
+    /* <small>Id: ${libro.id}</small> */
     carritoLibros.appendChild(articulo);
 }
