@@ -1,0 +1,22 @@
+{
+  "name": "practica-node",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "proyecto practica de node",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "node src/index.js",
+    "console": "echo 'hola martin' && npm run dev"
+  },
+  "author": "martin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "env-var": "^7.5.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ejercicio1",
+  "version": "0.0.1",
+  "description": "Ejercicio de web server 1",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon servidor.js"
+  },
+  "author": "martin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

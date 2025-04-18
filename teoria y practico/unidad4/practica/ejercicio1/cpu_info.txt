@@ -1,0 +1,83 @@
+Información de la CPU:
+
+Núcleo 1:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 409765
+    Nice: 0
+    Sistema: 209140
+    Inactivo: 3259250
+    IRQ: 34046
+
+Núcleo 2:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 338203
+    Nice: 0
+    Sistema: 115609
+    Inactivo: 3424171
+    IRQ: 2375
+
+Núcleo 3:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 469937
+    Nice: 0
+    Sistema: 193109
+    Inactivo: 3214937
+    IRQ: 2328
+
+Núcleo 4:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 427156
+    Nice: 0
+    Sistema: 113218
+    Inactivo: 3337593
+    IRQ: 1640
+
+Núcleo 5:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 433062
+    Nice: 0
+    Sistema: 146953
+    Inactivo: 3297953
+    IRQ: 2406
+
+Núcleo 6:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 324390
+    Nice: 0
+    Sistema: 105296
+    Inactivo: 3448281
+    IRQ: 1468
+
+Núcleo 7:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 412062
+    Nice: 0
+    Sistema: 143796
+    Inactivo: 3322109
+    IRQ: 2093
+
+Núcleo 8:
+  Modelo: AMD FX(tm)-9370 Eight-Core Processor           
+  Velocidad: 4420 MHz
+  Tiempos:
+    Usuario: 346968
+    Nice: 0
+    Sistema: 132328
+    Inactivo: 3398656
+    IRQ: 3718
+
+Número de núcleos: 8

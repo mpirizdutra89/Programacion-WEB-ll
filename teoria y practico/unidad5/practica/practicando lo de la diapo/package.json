@@ -1,0 +1,15 @@
+{
+  "name": "practicando-lo-de-la-diapo",
+  "version": "0.0.1",
+  "description": "Practiva de reques y response de un servidor",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Martin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

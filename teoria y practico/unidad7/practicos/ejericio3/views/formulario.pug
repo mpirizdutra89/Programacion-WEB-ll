@@ -1,0 +1,49 @@
+extends layout
+block content
+  form#formData
+    .campo
+      label(for='nombre') Nombre:
+      input#nombre(type='text' name='nombre' autocomplete='off' required)
+    .campo
+      label(for='dni') dni:
+      input#dni(type='text' name='dni' autocomplete='off' required)
+
+    if profesiones.length > 0
+      .campo 
+        h4 Profesiones:
+        each profesion in profesiones
+          label
+            input(type="checkbox", name="profesiones", value=profesion)
+            | #{profesion}
+
+
+    .campo
+      label(for='provincia') Provincia:
+      select#provincia(name='provincia'  required)
+        - const provincia=Object.keys(provincias_localidades)
+        if provincia.length > 0
+          option(value) Seleccione una provincia
+          each prov in provincia
+           
+            option(value=prov data-id=provincias_localidades[prov]) #{prov}
+        else 
+          option(value=0 ) No existen datos
+
+    .campo
+      label(for='localidad') Localidad:
+      select#localidad(name='localidad'  required)
+      
+
+    .campo
+      label(for='fecha') Fecha de Nacimiento:
+      input#fecha(type='date' name='fecha' required)
+    .campo
+      label(for='nacionalidad') Nacionalidad:
+      input#nacionalidad(type='text' name='nacionalidad' autocomplete='off' required)
+    .botones
+      button(type='reset') Limpiar
+      button(type='submit') Enviar
+  
+  #datos-container
+    h2 Datos resibidos del servidor:
+    ul#lista-datos

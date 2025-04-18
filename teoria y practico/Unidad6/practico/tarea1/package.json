@@ -1,0 +1,19 @@
+{
+  "name": "tarea1",
+  "version": "0.0.1",
+  "description": "Practica de node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "martin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+   
+  }
+}

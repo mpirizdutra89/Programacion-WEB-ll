@@ -1,0 +1,20 @@
+{
+ 
+  "name": "tarea5",
+  "version": "1.0.0",
+  "main": "app.js",
+
+  "keywords": [],
+  "author": "Martin",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "description": "Practica de expres responder a datos de un formulario por Post",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

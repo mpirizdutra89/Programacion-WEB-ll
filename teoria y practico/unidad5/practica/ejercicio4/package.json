@@ -1,0 +1,15 @@
+{
+  "name": "servidor_modular",
+  "version": "0.0.1",
+  "description": "Modularisa las funciones de un servidor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "author": "martin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

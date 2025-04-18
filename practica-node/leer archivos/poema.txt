@@ -1,0 +1,31 @@
+Martín y su viaje en Node.js
+
+Martín, curioso y sin dudar,
+quiso en JavaScript programar.
+Descubrió un mundo sin igual,
+donde el backend es natural.
+
+Node.js lo invitó a jugar,
+con fs empezó a explorar.
+Leyó archivos, creó un servidor,
+y con express todo fluyó mejor.
+
+Promesas llegaron sin avisar,
+async/await lo hizo esperar.
+Pero entendió, con gran emoción,
+que el código ahora era mejor.
+
+Entre npm install y require(),
+los módulos fueron su poder.
+Con MongoDB guardó información,
+y REST API fue su misión.
+
+Errores surgían, qué gran enredo,
+pero con console.log halló el secreto.
+Así aprendió, sin miedo a fallar,
+porque en Node, todo es mejorar.
+
+Hoy Martín sigue su camino,
+escribiendo código con gran destino.
+En cada request, en cada función,
+su pasión crece con cada sesión.
