@@ -1,0 +1,18 @@
+{
+  "name": "noticias2",
+  "version": "0.0.1",
+  "description": "aa",
+  "author": "amrt",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

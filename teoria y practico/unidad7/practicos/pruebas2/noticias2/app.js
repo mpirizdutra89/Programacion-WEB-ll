@@ -3,8 +3,8 @@ const path = require('path')
 const app = express()
 const PORT = 3000
 const { notFound, errorHandler } = require('./middlewares/errorHandler');
-const usersRouter = require('./routes/userRout')
-const inicioRouter = require('./routes/inicioRout')
+
+const inicioRouter = require('./routes/inicio')
 
 // Public : archivos estáticos accesibles desde el navegador
 app.use(express.static(path.join(__dirname, 'public')))
@@ -18,18 +18,18 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 
-app.use('/usuarios', usersRouter)
+/* app.use('/usuarios', acaRouterNuevos) Rutas mas espesificas van arriba de las generales para evitar problemas */
 
 app.use('/', inicioRouter)
 //
 
-// Middleware 404
+// Middleware 404 Maneja ruta que no exiten por eso va abajo
 app.use(notFound);
 
-// Middleware de errores generales (opcional)
+// Middleware de errores generales 
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`)
+  console.log(`Servidor corriendo en http://localhost:${PORT}`)
 })
 
